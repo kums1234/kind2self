@@ -66,7 +66,3 @@ For questions about this policy or how the app handles your data:
 kumaran.pec@gmail.com
 
 ---
-
-## Hosting this policy
-
-The App Store requires a public URL for the privacy policy. Two free options:
