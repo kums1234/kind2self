@@ -1,0 +1,15 @@
+title: Kind2Self
+description: A privacy-first self-care iOS app.
+theme: jekyll-theme-minimal
+
+# Pretty permalinks so PRIVACY.md is served at /PRIVACY/ (App Store-friendly URL).
+permalink: pretty
+
+# Only render the landing and the privacy policy. The Xcode project, integration
+# tests, and other source folders do not need to be processed by Jekyll.
+include:
+  - PRIVACY.md
+exclude:
+  - kind2self-xcode
+  - "*.swift"
+  - "*.entitlements"
