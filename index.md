@@ -10,5 +10,6 @@ All data lives on your device. No server, no analytics, no third-party SDKs.
 
 ## Links
 
+- [Support](./support/)
 - [Privacy Policy](./PRIVACY/)
 - [Contact](mailto:kumaran.pec@gmail.com)
