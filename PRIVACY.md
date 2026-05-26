@@ -37,9 +37,20 @@ You can revoke any permission at any time in iOS Settings → Privacy & Security
 
 ## Third parties
 
-The app contains no third-party SDKs. Specifically: no Firebase, no Mixpanel, no AppsFlyer, no Adjust, no Crashlytics, no Sentry, no Google Analytics, no Facebook SDK, no advertising frameworks. The only frameworks used are Apple's own (Foundation, SwiftUI, AVFoundation, Speech, NaturalLanguage, UserNotifications, Charts).
+The app contains no third-party SDKs. Specifically: no Firebase, no Mixpanel, no AppsFlyer, no Adjust, no Crashlytics, no Sentry, no Google Analytics, no Facebook SDK, no advertising frameworks. The only frameworks used are Apple's own (Foundation, SwiftUI, AVFoundation, Speech, NaturalLanguage, UserNotifications, Charts, FoundationModels).
 
 If you enable iCloud Drive sync, your data is stored in Apple's iCloud, governed by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
+
+## Sending and receiving kindnesses
+
+The "Send a kindness" feature lets you share an affirmation or short note with someone you choose. It works without any server we operate:
+
+- The message you send is **encoded directly into the share link** you give to the recipient. We have no server to receive or store it. The message text never reaches us, GitHub, or anywhere else — the recipient's device decodes it locally when they open the link.
+- The link travels through whichever messaging app you choose from the iOS share sheet (iMessage, WhatsApp, Mail, AirDrop, etc.). That messaging app's privacy policy governs the transport. We have no insight into who you sent it to, when, or whether it was received.
+- Your sender name is attached only if you have explicitly turned on "Include my name" in Settings → Sharing kindnesses. The default is **off** (anonymous).
+- Before a message is sent, it's reviewed on your device for content that doesn't fit the spirit of the feature (links, contact info, all-caps shouting, hostile wording). On capable devices (iPhone 15 Pro or later, iOS 18.1+) this review uses Apple Intelligence's on-device language model. Otherwise it uses simple structural checks plus Apple's NaturalLanguage sentiment scoring. **The text never leaves your device for this review.**
+- When you receive a kindness, the sender's name (if any) and the message appear in a sheet inside the app. You can save it to your library or close it without saving. We never see what you receive either.
+- If the sender's app flagged a message as borderline at compose time, you'll see a reveal gate first — you can choose to read it or close without revealing.
 
 ## Data retention and deletion
 
